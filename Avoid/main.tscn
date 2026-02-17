@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://vg7mfoad0gk5"]
+
+[ext_resource type="PackedScene" uid="uid://6y82x4d1a68c" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://b22pgcmt63ycn" path="res://atack_manager.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://Attacks/AreaAttack.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://sn74ak5a6sio" path="res://sprites/touch_screen_controls/up.png" id="4_cegan"]
+[ext_resource type="Texture2D" uid="uid://dc1v64fuarlkc" path="res://sprites/touch_screen_controls/act_up.png" id="5_82xsv"]
+[ext_resource type="PackedScene" uid="uid://dk3y6wlflkbhj" path="res://Attacks/LaserAttack.tscn" id="5_getpj"]
+[ext_resource type="Texture2D" uid="uid://dyk3qatja6mul" path="res://sprites/touch_screen_controls/down.png" id="6_getpj"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://Attacks/AreaRegen.tscn" id="6_ryguw"]
+[ext_resource type="Texture2D" uid="uid://cbu5jc5rj6w4b" path="res://sprites/touch_screen_controls/act_down.png" id="7_ryguw"]
+[ext_resource type="Texture2D" uid="uid://w5qahw21j3vi" path="res://sprites/touch_screen_controls/up_right.png" id="8_cegan"]
+[ext_resource type="Texture2D" uid="uid://dx50oto0vyjr1" path="res://sprites/touch_screen_controls/act_up_right.png" id="9_82xsv"]
+[ext_resource type="Texture2D" uid="uid://b22p84ocaftyf" path="res://sprites/touch_screen_controls/up_left.png" id="10_getpj"]
+[ext_resource type="Texture2D" uid="uid://tdhf4bnexwew" path="res://sprites/touch_screen_controls/act_up_left.png" id="11_ryguw"]
+[ext_resource type="Texture2D" uid="uid://humc2mjo5rym" path="res://sprites/touch_screen_controls/down_left.png" id="12_d13ii"]
+[ext_resource type="Texture2D" uid="uid://d0q3basvgww8a" path="res://sprites/touch_screen_controls/act_down_left.png" id="13_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://guognaekgfjm" path="res://sprites/touch_screen_controls/down_right.png" id="14_0odxb"]
+[ext_resource type="Texture2D" uid="uid://caghtstjs3hqy" path="res://sprites/touch_screen_controls/act_down_right.png" id="15_lswn8"]
+[ext_resource type="Texture2D" uid="uid://bqlcde5eo0cot" path="res://sprites/touch_screen_controls/left.png" id="16_d13ii"]
+[ext_resource type="Texture2D" uid="uid://gr7fh8r05r7r" path="res://sprites/touch_screen_controls/act_left.png" id="17_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://b1d71g64hwb4m" path="res://sprites/touch_screen_controls/right.png" id="18_0odxb"]
+[ext_resource type="Texture2D" uid="uid://d1ptmdpt65k6f" path="res://sprites/touch_screen_controls/act_right.png" id="19_lswn8"]
+[ext_resource type="PackedScene" uid="uid://cn7gha1yc3216" path="res://Attacks/BulletAttack.tscn" id="20_82xsv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(222, 222)
+
+[node name="Node2D" type="Node2D" unique_id=1455060469]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1727518146]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1166.5
+offset_top = -500.0
+offset_right = 1166.5
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1497682045]
+
+[node name="Player" parent="." unique_id=73547909 instance=ExtResource("1_ig7tw")]
+
+[node name="AtackManager" type="Node" parent="." unique_id=678281457]
+script = ExtResource("2_0xm2m")
+attack_scenes = Array[PackedScene]([ExtResource("3_h2yge"), ExtResource("20_82xsv"), ExtResource("5_getpj"), ExtResource("6_ryguw")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=993941806]
+follow_viewport_enabled = true
+
+[node name="Touch_Up" type="TouchScreenButton" parent="CanvasLayer" unique_id=375271957]
+position = Vector2(-944.5, -333)
+texture_normal = ExtResource("4_cegan")
+texture_pressed = ExtResource("5_82xsv")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_up"
+
+[node name="Touch_Down" type="TouchScreenButton" parent="CanvasLayer" unique_id=686275407]
+position = Vector2(-944.5, 111)
+texture_normal = ExtResource("6_getpj")
+texture_pressed = ExtResource("7_ryguw")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_down"
+
+[node name="Touch_Up_Right" type="TouchScreenButton" parent="CanvasLayer" unique_id=1239337586]
+position = Vector2(-722.5, -333)
+texture_normal = ExtResource("8_cegan")
+texture_pressed = ExtResource("9_82xsv")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_up_right"
+
+[node name="Touch_Up_Left" type="TouchScreenButton" parent="CanvasLayer" unique_id=1415661476]
+position = Vector2(-1166.5, -333)
+texture_normal = ExtResource("10_getpj")
+texture_pressed = ExtResource("11_ryguw")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_up_left"
+
+[node name="Touch_Down_Left" type="TouchScreenButton" parent="CanvasLayer" unique_id=865184304]
+position = Vector2(-1166.5, 111)
+texture_normal = ExtResource("12_d13ii")
+texture_pressed = ExtResource("13_1u8w0")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_down_left"
+
+[node name="Touch_Down_Right" type="TouchScreenButton" parent="CanvasLayer" unique_id=308419622]
+position = Vector2(-722.5, 111)
+texture_normal = ExtResource("14_0odxb")
+texture_pressed = ExtResource("15_lswn8")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_down_right"
+
+[node name="Touch_Left" type="TouchScreenButton" parent="CanvasLayer" unique_id=136190644]
+position = Vector2(-1166.5, -111)
+texture_normal = ExtResource("16_d13ii")
+texture_pressed = ExtResource("17_1u8w0")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_left"
+
+[node name="Touch_Right" type="TouchScreenButton" parent="CanvasLayer" unique_id=210338879]
+position = Vector2(-722.5, -111)
+texture_normal = ExtResource("18_0odxb")
+texture_pressed = ExtResource("19_lswn8")
+shape = SubResource("RectangleShape2D_lquwl")
+action = "ui_right"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=571346706]
+offset_left = -944.5
+offset_top = -111.0
+offset_right = -722.5
+offset_bottom = 111.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 128
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BulletAttack" parent="." unique_id=1055124260 instance=ExtResource("20_82xsv")]
