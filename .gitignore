@@ -1,18 +1,29 @@
 ### Godot Engine ###
-# Cache, generated and platform-specific files
-.godot/
-.import/                # ignore the entire import cache folder
+# Import cache
+.import/
+
+# Logs, temp
 *.tmp
 *.log
-*.translation          # binary imported translations
+*.translation
 
-# Mono / C# output
+# Optional: No ignorar toda la carpeta .godot/
+# Solo ignorar cosas generados
+.godot/mono_cache/
+.godot/asset_cache/
+
+### Mono / C# ###
 .mono/
 data_*/
 mono_crash.*.json
+# Build outputs
+obj/
+*.dll
+*.pdb
+*.exe
+*.userprefs
 
 ### IDE ###
-# Visual Studio Code
 .vscode/
 !.vscode/settings.json
 !.vscode/launch.json
@@ -21,23 +32,18 @@ mono_crash.*.json
 !.vscode/*.code-snippets
 
 ### OS generated ###
-# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
-# Other OS metadata
 ._*
 
 ### Build / Export outputs ###
-/bin/
-/build/
-/*.apk
-/*.aab
+bin/
+build/
+*.apk
+*.aab
 *.pck
