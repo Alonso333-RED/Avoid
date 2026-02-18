@@ -8,6 +8,7 @@ func _ready():
 	randomize()
 	rotation_degrees = randi() % 360
 	set_random_position()
+	$spawn_sound.play()
 	heal_time = randi_range(1, 4)
 	visual.visible = true
 	body_entered.connect(_on_body_entered)

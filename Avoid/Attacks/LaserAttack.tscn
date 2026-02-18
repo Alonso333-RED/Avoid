@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://vtq22g5wdnu0" path="res://Attacks/laser_attack.gd" id="1_1iofk"]
 [ext_resource type="Texture2D" uid="uid://cqslfvgmpxu0n" path="res://sprites/LaserAttackWarning.png" id="1_kj588"]
 [ext_resource type="Texture2D" uid="uid://ksvtw0myl381" path="res://sprites/LaserAttackExecute.png" id="2_1iofk"]
+[ext_resource type="AudioStream" uid="uid://chutwynjpugf7" path="res://sounds/laser_attack.wav" id="4_3yopk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w53eg"]
 size = Vector2(25, 2500)
@@ -21,3 +22,6 @@ texture = ExtResource("1_kj588")
 z_index = 2
 scale = Vector2(0.025, 2.5)
 texture = ExtResource("2_1iofk")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=1969029126]
+stream = ExtResource("4_3yopk")

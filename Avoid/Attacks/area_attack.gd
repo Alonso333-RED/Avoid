@@ -31,7 +31,7 @@ func start_warning():
 	start_attack()
 	
 func start_attack():
-	$explode.play()
+	$attack_sound.play()
 	warn_visual.visible = false
 	attack_visual.visible = true
 	attacking = true
@@ -45,8 +45,6 @@ func attack():
 		for body in players_in_area:
 			if is_instance_valid(body) and body.is_in_group("player"):
 				body.take_damage(damage_per_attack)
-				#print("hit" + str(elapsed_time))
-				print(body.health)
 	attacking = false
 	queue_free()
 					

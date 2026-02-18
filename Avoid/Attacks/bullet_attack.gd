@@ -10,6 +10,7 @@ var dir : Vector2
 
 func _ready():
 	randomize()
+	$attack_sound.play()
 	speed = speed_pool[randi() % speed_pool.size()]
 
 	var center = Vector2(

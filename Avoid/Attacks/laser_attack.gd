@@ -32,6 +32,7 @@ func start_warning():
 	start_attack()
 	
 func start_attack():
+	$attack_sound.play()
 	warn_visual.visible = false
 	attack_visual.visible = true
 	attacking = true

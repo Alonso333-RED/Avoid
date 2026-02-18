@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dtexy7nct4pmq" path="res://Attacks/area_attack.gd" id="1_swdkm"]
 [ext_resource type="Texture2D" uid="uid://utr5k3q5dnau" path="res://sprites/AreaAttackWarning.png" id="2_feymf"]
 [ext_resource type="Texture2D" uid="uid://o4aq7f5v8fo2" path="res://sprites/AreaAttackExecute.png" id="3_stx4x"]
-[ext_resource type="AudioStream" uid="uid://iwv4xsf6hlpt" path="res://sounds/explosion.wav" id="4_feymf"]
+[ext_resource type="AudioStream" uid="uid://bywburv73utjj" path="res://sounds/area_attack.wav" id="4_feymf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rjuya"]
 radius = 50.0
@@ -24,6 +24,5 @@ z_index = 2
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_stx4x")
 
-[node name="explode" type="AudioStreamPlayer" parent="." unique_id=1826557113]
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=1826557113]
 stream = ExtResource("4_feymf")
-volume_db = -12.5

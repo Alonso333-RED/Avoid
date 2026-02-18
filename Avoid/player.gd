@@ -52,6 +52,7 @@ func take_damage(amount: int) -> void:
 		
 func recover_health(amount: int) -> void:
 	health += amount
+	$recover_sound.play()
 	health = clamp(health, 0, max_health)
 	hp_indicator.text = str(health)
 	

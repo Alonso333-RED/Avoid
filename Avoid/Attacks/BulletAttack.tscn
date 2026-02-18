@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxmmhnyaj6njt" path="res://sprites/BulletAttack.png" id="1_6upw3"]
 [ext_resource type="Script" uid="uid://dshwjkyf2dgmq" path="res://Attacks/bullet_attack.gd" id="1_l3oeq"]
+[ext_resource type="AudioStream" uid="uid://d1atfisq6r2vv" path="res://sounds/bullet_attack.wav" id="3_n83od"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hycrm"]
 radius = 25.0
@@ -16,3 +17,6 @@ shape = SubResource("CapsuleShape2D_hycrm")
 [node name="attack_sprite" type="Sprite2D" parent="." unique_id=892373438]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_6upw3")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=701376473]
+stream = ExtResource("3_n83od")
