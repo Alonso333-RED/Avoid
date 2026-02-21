@@ -1,9 +1,10 @@
 extends Area2D
 
+var rarity := 1
 var warn_time : int
 var attack_time : int
-@export var damage_per_attack := 1
-@export var seconds_per_attack := 0.1
+var damage_per_attack := 1
+var seconds_per_attack := 0.1
 var attacking := false
 var players_in_area := []
 @onready var warn_visual = $warn_sprite

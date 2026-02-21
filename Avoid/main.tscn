@@ -2,13 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://6y82x4d1a68c" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://b22pgcmt63ycn" path="res://atack_manager.gd" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://Attacks/AreaAttack.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://Attacks/attack_data.gd" id="3_1u8w0"]
+[ext_resource type="Resource" uid="uid://b2n6in5412jan" path="res://Attacks/data/area_attack.tres" id="4_0odxb"]
 [ext_resource type="Texture2D" uid="uid://sn74ak5a6sio" path="res://sprites/touch_screen_controls/up.png" id="4_cegan"]
 [ext_resource type="Texture2D" uid="uid://dc1v64fuarlkc" path="res://sprites/touch_screen_controls/act_up.png" id="5_82xsv"]
-[ext_resource type="PackedScene" uid="uid://dk3y6wlflkbhj" path="res://Attacks/LaserAttack.tscn" id="5_getpj"]
+[ext_resource type="Resource" uid="uid://owqeffwbn1r0" path="res://Attacks/data/bullet_attack.tres" id="5_lswn8"]
+[ext_resource type="Resource" uid="uid://xkoqv77slg41" path="res://Attacks/data/laser_attack.tres" id="6_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://dyk3qatja6mul" path="res://sprites/touch_screen_controls/down.png" id="6_getpj"]
-[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://Attacks/AreaRegen.tscn" id="6_ryguw"]
 [ext_resource type="Texture2D" uid="uid://cbu5jc5rj6w4b" path="res://sprites/touch_screen_controls/act_down.png" id="7_ryguw"]
+[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://Attacks/data/area_regen.tres" id="7_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://w5qahw21j3vi" path="res://sprites/touch_screen_controls/up_right.png" id="8_cegan"]
 [ext_resource type="Texture2D" uid="uid://dx50oto0vyjr1" path="res://sprites/touch_screen_controls/act_up_right.png" id="9_82xsv"]
 [ext_resource type="Texture2D" uid="uid://b22p84ocaftyf" path="res://sprites/touch_screen_controls/up_left.png" id="10_getpj"]
@@ -21,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://gr7fh8r05r7r" path="res://sprites/touch_screen_controls/act_left.png" id="17_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://b1d71g64hwb4m" path="res://sprites/touch_screen_controls/right.png" id="18_0odxb"]
 [ext_resource type="Texture2D" uid="uid://d1ptmdpt65k6f" path="res://sprites/touch_screen_controls/act_right.png" id="19_lswn8"]
-[ext_resource type="PackedScene" uid="uid://cn7gha1yc3216" path="res://Attacks/BulletAttack.tscn" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://bcsgg17e1qjo7" path="res://sprites/game_mask-3000_3000-1000.png" id="23_d13ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
@@ -50,7 +51,7 @@ limit_smoothed = true
 
 [node name="AtackManager" type="Node" parent="." unique_id=678281457]
 script = ExtResource("2_0xm2m")
-attack_scenes = Array[PackedScene]([ExtResource("3_h2yge"), ExtResource("20_82xsv"), ExtResource("5_getpj"), ExtResource("6_ryguw")])
+attacks = Array[ExtResource("3_1u8w0")]([ExtResource("4_0odxb"), ExtResource("5_lswn8"), ExtResource("6_a6jrf"), ExtResource("7_xuqvo")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=993941806]
 follow_viewport_enabled = true

@@ -46,8 +46,6 @@ func attack():
 		for body in players_in_area:
 			if is_instance_valid(body) and body.is_in_group("player"):
 				body.take_damage(damage_per_attack)
-				#print("hit" + str(elapsed_time))
-				print(body.health)
 	attacking = false
 	queue_free()
 					

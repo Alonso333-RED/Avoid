@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var hp_recovered: int = 5
+var hp_recovered: int = 5
 var heal_time: int = 0
 @onready var visual: Sprite2D = $Sprite2D
 

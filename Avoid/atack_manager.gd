@@ -1,15 +1,23 @@
 extends Node
 
-@export var attack_scenes : Array[PackedScene] = []
+@export var attacks : Array[AttackData] = []
 
 var spawn_rate : float = 1.0
 var spawn_accumulator : float = 0.0
 var time_elapsed : float = 0.0
+var total_weight : float = 0.0
 
+func _ready():
+	total_weight = 0.0
+	for data in attacks:
+		if data.rarity <= 0.0:
+			push_error("rarity debe ser mayor a 0 en todos los ataques")
+		total_weight += 1.0 / data.rarity
+		
 func _process(delta: float):
-	if attack_scenes.size() == 0:
+	if attacks.size() == 0:
 		return
-
+		
 	time_elapsed += delta
 	spawn_rate = 1.0 + (time_elapsed * 0.1)
 	spawn_accumulator += spawn_rate * delta
@@ -19,8 +27,23 @@ func _process(delta: float):
 		spawn_accumulator -= to_spawn
 		for i in to_spawn:
 			spawn_attack()
-
+			
 func spawn_attack():
-	var idx = randi() % attack_scenes.size()
-	var attack = attack_scenes[idx].instantiate()
-	add_child(attack)
+	var data = pick_attack_data()
+	if data == null:
+		return
+	
+	var instance = data.scene.instantiate()
+	add_child(instance)
+	
+func pick_attack_data() -> AttackData:
+	if total_weight <= 0.0:
+		return null
+	var r := randf() * total_weight
+	var cumulative := 0.0
+	
+	for data in attacks:
+		cumulative += 1.0 / data.rarity
+		if r <= cumulative:
+			return data
+	return null
