@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="Avoid"
-run/main_scene="uid://vg7mfoad0gk5"
+run/main_scene="uid://n87p2micx7by"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=2333
+window/size/viewport_width=2000
 window/size/viewport_height=1000
+window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
