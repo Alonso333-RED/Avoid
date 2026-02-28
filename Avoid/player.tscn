@@ -18,7 +18,6 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_onrkg")
 
 [node name="Sprite2Dover" type="Sprite2D" parent="." unique_id=220653126]
-modulate = Color(1, 1, 1, 0.5)
 self_modulate = Color(1, 1, 1, 0.5)
 z_index = 3
 scale = Vector2(0.1, 0.1)
