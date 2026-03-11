@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bd8kiix555cl" path="res://ui/MainMenu/stars_bg.gd" id="1_cruaa"]
 [ext_resource type="FontFile" uid="uid://d3bb1xocxaabe" path="res://fonts/Doto-VariableFont_ROND,wght.ttf" id="1_otibh"]
 [ext_resource type="Script" uid="uid://35d6xt4hoo2q" path="res://ui/MainMenu/buttons_scripts/close.gd" id="3_b76km"]
+[ext_resource type="Script" uid="uid://p5f1y4k0aaf1" path="res://ui/MainMenu/buttons_scripts/play.gd" id="3_wlwnj"]
 
 [node name="MainMenu" type="Control" unique_id=138925624]
 layout_mode = 3
@@ -49,7 +50,7 @@ offset_right = 500.0
 offset_bottom = 500.0
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=774630085]
+[node name="Tittle" type="Label" parent="VBoxContainer" unique_id=774630085]
 custom_minimum_size = Vector2(500, 250)
 layout_mode = 2
 size_flags_vertical = 3
@@ -59,7 +60,7 @@ text = "UFO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=989898134]
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=989898134]
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_vertical = 3
@@ -67,6 +68,7 @@ theme_override_fonts/font = ExtResource("1_otibh")
 theme_override_font_sizes/font_size = 125
 text = "Jugar"
 flat = true
+script = ExtResource("3_wlwnj")
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1373752080]
 layout_mode = 2
@@ -118,7 +120,7 @@ layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="close" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=659756932]
+[node name="Close" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=659756932]
 custom_minimum_size = Vector2(500, 94)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -129,7 +131,7 @@ text = "Cerrar"
 flat = true
 script = ExtResource("3_b76km")
 
-[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=915690163]
+[node name="Author_version" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=915690163]
 custom_minimum_size = Vector2(250, 94)
 layout_mode = 2
 size_flags_vertical = 3
