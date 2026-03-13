@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bd8kiix555cl" path="res://ui/MainMenu/stars_bg.gd" id="1_sjqgd"]
 [ext_resource type="Texture2D" uid="uid://dcfrh77q0htgf" path="res://sprites/MainMenuBG_20260225_060730_0000.png" id="2_0p1h0"]
+[ext_resource type="FontFile" uid="uid://d3bb1xocxaabe" path="res://fonts/Doto-VariableFont_ROND,wght.ttf" id="2_o3ose"]
+[ext_resource type="Script" uid="uid://cvbfg7tvp4ye4" path="res://ui/LevelSelection/button_scripts/play_level.gd" id="3_7fhl7"]
+[ext_resource type="Texture2D" uid="uid://d2qds78q24uyy" path="res://sprites/next_option.png" id="5_iipng"]
 
 [node name="MainMenu" type="Control" unique_id=138925624]
 layout_mode = 3
@@ -43,18 +46,61 @@ color = Color(0, 0, 0, 0.5)
 z_index = 3
 layout_mode = 0
 offset_left = -500.0
-offset_top = -500.0
+offset_top = -374.0
 offset_right = 500.0
-offset_bottom = 500.0
+offset_bottom = 376.0
 alignment = 1
 
-[node name="LevelPreview" type="TextureRect" parent="." unique_id=568723479]
+[node name="LevelPreview" type="Button" parent="VBoxContainer" unique_id=991029024]
 z_index = 2
 custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+icon = ExtResource("2_0p1h0")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_7fhl7")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=275950610]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o3ose")
+theme_override_font_sizes/font_size = 64
+text = "FRACCIONAMIENTOS"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=688100150]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o3ose")
+theme_override_font_sizes/font_size = 32
+text = "Dificultad: Mediana"
+
+[node name="next_level" type="Button" parent="." unique_id=1939267876]
+z_index = 6
 layout_mode = 0
-offset_left = -500.0
-offset_top = -375.0
-offset_right = 500.0
-offset_bottom = 125.0
-texture = ExtResource("2_0p1h0")
-expand_mode = 1
+offset_left = 875.0
+offset_top = -125.0
+offset_right = 1137.0
+offset_bottom = 133.0
+rotation = 1.5707964
+text = "
+"
+icon = ExtResource("5_iipng")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="back_level" type="Button" parent="." unique_id=517382112]
+z_index = 6
+layout_mode = 0
+offset_left = -875.0
+offset_top = 125.0
+offset_right = -613.0
+offset_bottom = 383.0
+rotation = -1.5707964
+text = "
+"
+icon = ExtResource("5_iipng")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2046626664]
