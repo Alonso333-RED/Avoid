@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp07cvjdjie8v"]
 
 [ext_resource type="Script" uid="uid://bd8kiix555cl" path="res://ui/MainMenu/stars_bg.gd" id="1_sjqgd"]
-[ext_resource type="Texture2D" uid="uid://dcfrh77q0htgf" path="res://sprites/MainMenuBG_20260225_060730_0000.png" id="2_0p1h0"]
+[ext_resource type="Texture2D" uid="uid://kwmic60vhggj" path="res://sprites/MainMenuBG.png" id="2_iipng"]
 [ext_resource type="FontFile" uid="uid://d3bb1xocxaabe" path="res://fonts/Doto-VariableFont_ROND,wght.ttf" id="2_o3ose"]
 [ext_resource type="Script" uid="uid://cvbfg7tvp4ye4" path="res://ui/LevelSelection/button_scripts/play_level.gd" id="3_7fhl7"]
 [ext_resource type="Texture2D" uid="uid://d2qds78q24uyy" path="res://sprites/next_option.png" id="5_iipng"]
@@ -55,7 +55,7 @@ alignment = 1
 z_index = 2
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 2
-icon = ExtResource("2_0p1h0")
+icon = ExtResource("2_iipng")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("3_7fhl7")

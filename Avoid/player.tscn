@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6y82x4d1a68c"]
 
 [ext_resource type="Script" uid="uid://71i6hryfwstd" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://d2v5ev7bpp8ik" path="res://sprites/UFO-0_20260225_060805_0000.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://2humd0tnmmuv" path="res://sprites/UFO-0.png" id="2_sweqy"]
 [ext_resource type="AudioStream" uid="uid://ddggg72ek0tt1" path="res://sounds/hit.wav" id="3_i3pqv"]
 [ext_resource type="AudioStream" uid="uid://dx0yw7gopxysg" path="res://sounds/regen.wav" id="4_hqtel"]
 [ext_resource type="AudioStream" uid="uid://cmhiu13jgeohd" path="res://sounds/recover.wav" id="5_sweqy"]
