@@ -64,14 +64,14 @@ script = ExtResource("3_7fhl7")
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_o3ose")
 theme_override_font_sizes/font_size = 64
-text = "FRACCIONAMIENTOS"
+text = "Juego Original"
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer" unique_id=688100150]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_o3ose")
 theme_override_font_sizes/font_size = 32
-text = "Dificultad: Mediana"
+text = "Dificultad: Facil"
 
 [node name="next_level" type="Button" parent="." unique_id=1939267876]
 z_index = 6
