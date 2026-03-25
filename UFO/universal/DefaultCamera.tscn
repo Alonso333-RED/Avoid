@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cfm5hq075vb57"]
+
+[node name="DefaultCamera" type="Camera2D" unique_id=736599886]
+limit_smoothed = true
