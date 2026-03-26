@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc7pge74mkmlv"
-path="res://.godot/imported/area_hell_preview.png-f930afc0720e96d450f75e22077dc2a0.ctex"
+uid="uid://dbwpokhc64074"
+path="res://.godot/imported/laser_party_preview.png-bb8a176282e93f20f9ee897cb9debf5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/area_hell/area_hell_preview.png"
-dest_files=["res://.godot/imported/area_hell_preview.png-f930afc0720e96d450f75e22077dc2a0.ctex"]
+source_file="res://levels/laser_party/laser_party_preview.png"
+dest_files=["res://.godot/imported/laser_party_preview.png-bb8a176282e93f20f9ee897cb9debf5d.ctex"]
 
 [params]
 

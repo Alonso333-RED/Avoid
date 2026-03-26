@@ -6,8 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_2cdau"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="5_0v7l4"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://Attacks/attack_data.gd" id="5_2cdau"]
-[ext_resource type="Resource" uid="uid://b2n6in5412jan" path="res://Attacks/area_attack/area_attack.tres" id="6_0v7l4"]
-[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://Attacks/area_regen/area_regen.tres" id="7_5nqen"]
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://Attacks/area_attack/AreaAttack.tscn" id="6_2cdau"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://Attacks/area_regen/AreaRegen.tscn" id="7_0v7l4"]
+
+[sub_resource type="Resource" id="Resource_5nqen"]
+resource_local_to_scene = true
+script = ExtResource("5_2cdau")
+scene = ExtResource("6_2cdau")
+rarity = 1.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"
+
+[sub_resource type="Resource" id="Resource_lsdcu"]
+resource_local_to_scene = true
+script = ExtResource("5_2cdau")
+scene = ExtResource("7_0v7l4")
+rarity = 4.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"
 
 [node name="Node2D" type="Node2D" unique_id=1455060469]
 
@@ -50,6 +64,6 @@ texture = ExtResource("2_febxa")
 [node name="game_ui" parent="." unique_id=746683599 instance=ExtResource("3_o1vra")]
 
 [node name="AttackSpawner" parent="." unique_id=1604386583 instance=ExtResource("4_2cdau")]
-attacks = Array[ExtResource("5_2cdau")]([ExtResource("6_0v7l4"), ExtResource("7_5nqen")])
+attacks = Array[ExtResource("5_2cdau")]([SubResource("Resource_5nqen"), SubResource("Resource_lsdcu")])
 
 [node name="DefaultCamera" parent="." unique_id=736599886 instance=ExtResource("5_0v7l4")]

@@ -6,8 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_006wk"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://Attacks/attack_data.gd" id="5_006wk"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="5_kledc"]
-[ext_resource type="Resource" uid="uid://xkoqv77slg41" path="res://Attacks/laser_attack/laser_attack.tres" id="6_kledc"]
-[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://Attacks/area_regen/area_regen.tres" id="7_6fegp"]
+[ext_resource type="PackedScene" uid="uid://dk3y6wlflkbhj" path="res://Attacks/laser_attack/LaserAttack.tscn" id="6_006wk"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://Attacks/area_regen/AreaRegen.tscn" id="7_kledc"]
+
+[sub_resource type="Resource" id="Resource_6fegp"]
+resource_local_to_scene = true
+script = ExtResource("5_006wk")
+scene = ExtResource("6_006wk")
+rarity = 1.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"
+
+[sub_resource type="Resource" id="Resource_c6spt"]
+resource_local_to_scene = true
+script = ExtResource("5_006wk")
+scene = ExtResource("7_kledc")
+rarity = 4.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"
 
 [node name="Node2D" type="Node2D" unique_id=1455060469]
 
@@ -50,6 +64,6 @@ texture = ExtResource("2_qpc23")
 [node name="game_ui" parent="." unique_id=746683599 instance=ExtResource("3_k235y")]
 
 [node name="AttackSpawner" parent="." unique_id=1604386583 instance=ExtResource("4_006wk")]
-attacks = Array[ExtResource("5_006wk")]([ExtResource("6_kledc"), ExtResource("7_6fegp")])
+attacks = Array[ExtResource("5_006wk")]([SubResource("Resource_6fegp"), SubResource("Resource_c6spt")])
 
 [node name="DefaultCamera" parent="." unique_id=736599886 instance=ExtResource("5_kledc")]

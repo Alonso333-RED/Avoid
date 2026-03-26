@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbwpokhc64074"
-path="res://.godot/imported/laser_hell_preview.png-a46bec57593aca015e8bdbcf14f8b282.ctex"
+uid="uid://bc7pge74mkmlv"
+path="res://.godot/imported/bomb_rain_preview.png-1ec514453f076a34e54561b07ba6c914.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/laser_hell/laser_hell_preview.png"
-dest_files=["res://.godot/imported/laser_hell_preview.png-a46bec57593aca015e8bdbcf14f8b282.ctex"]
+source_file="res://levels/bomb_rain/bomb_rain_preview.png"
+dest_files=["res://.godot/imported/bomb_rain_preview.png-1ec514453f076a34e54561b07ba6c914.ctex"]
 
 [params]
 

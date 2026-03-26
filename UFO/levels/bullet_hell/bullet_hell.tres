@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bu51fjqgk6yep"]
+
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://levels/level_data.gd" id="1_gnjlc"]
+[ext_resource type="PackedScene" uid="uid://dyku87b1kf7um" path="res://levels/bullet_hell/bullet_hell.tscn" id="1_nx10q"]
+
+[resource]
+script = ExtResource("1_gnjlc")
+name = "Infierno de Balas"
+difficulty = 2
+scene = ExtResource("1_nx10q")
