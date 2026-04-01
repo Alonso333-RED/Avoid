@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://b5maqqkc024jt"]
 
-[ext_resource type="PackedScene" uid="uid://c16q4pr0k7aop" path="res://levels/bomb_rain/bomb_rain.tscn" id="1_5bh0k"]
 [ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://levels/level_data.gd" id="1_wbobl"]
 
 [resource]
 script = ExtResource("1_wbobl")
+preview_path = "res://levels/bomb_rain/bomb_rain_preview.png"
 name = "Lluvia de Bombas"
-scene = ExtResource("1_5bh0k")
+scene = "res://levels/bomb_rain/bomb_rain.tscn"
