@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c1nrw4xheladr"]
 
 [ext_resource type="Texture2D" uid="uid://57cwc4j2hbfv" path="res://ui/game_ui/touch_screen_controls/up_left.png" id="1_gxelx"]
+[ext_resource type="Texture2D" uid="uid://c416fmysc0eqb" path="res://ui/game_ui/go_home.png" id="1_pfn65"]
 [ext_resource type="Script" uid="uid://b2nof7st80vml" path="res://ui/game_ui/button_scripts/up_left.gd" id="2_4ul05"]
+[ext_resource type="Script" uid="uid://cd4qtdvmr3pve" path="res://ui/game_ui/button_scripts/exit.gd" id="2_bruof"]
 [ext_resource type="Texture2D" uid="uid://drbn8s26qm6br" path="res://ui/game_ui/touch_screen_controls/up.png" id="3_mninb"]
 [ext_resource type="Script" uid="uid://bqdt87u8fegbl" path="res://ui/game_ui/button_scripts/up.gd" id="4_vvkuv"]
 [ext_resource type="Texture2D" uid="uid://b2228podl5wvc" path="res://ui/game_ui/touch_screen_controls/up_right.png" id="5_e4ceb"]
@@ -24,7 +26,44 @@ anchors_preset = 0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=848399417]
 follow_viewport_enabled = true
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer" unique_id=531746479]
+[node name="exit_button" type="GridContainer" parent="CanvasLayer" unique_id=2142184065]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2000.0
+offset_top = -1000.0
+offset_right = -1500.0
+offset_bottom = -750.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="exit" type="Button" parent="CanvasLayer/exit_button" unique_id=388381607]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_pfn65")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_bruof")
+
+[node name="Control" type="Control" parent="CanvasLayer/exit_button" unique_id=1246638479]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="CanvasLayer/exit_button" unique_id=1783192021]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="controls_container" type="GridContainer" parent="CanvasLayer" unique_id=531746479]
 z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,7 +80,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 3
 
-[node name="up_left" type="Button" parent="CanvasLayer/GridContainer" unique_id=1039868137]
+[node name="up_left" type="Button" parent="CanvasLayer/controls_container" unique_id=1039868137]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -51,7 +90,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_4ul05")
 
-[node name="up" type="Button" parent="CanvasLayer/GridContainer" unique_id=467090392]
+[node name="up" type="Button" parent="CanvasLayer/controls_container" unique_id=467090392]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -61,7 +100,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_vvkuv")
 
-[node name="up_right" type="Button" parent="CanvasLayer/GridContainer" unique_id=1726629055]
+[node name="up_right" type="Button" parent="CanvasLayer/controls_container" unique_id=1726629055]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -71,7 +110,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("6_4ul05")
 
-[node name="left" type="Button" parent="CanvasLayer/GridContainer" unique_id=1543214021]
+[node name="left" type="Button" parent="CanvasLayer/controls_container" unique_id=1543214021]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -81,7 +120,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("8_103ix")
 
-[node name="Label" type="Label" parent="CanvasLayer/GridContainer" unique_id=1858367600]
+[node name="Label" type="Label" parent="CanvasLayer/controls_container" unique_id=1858367600]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -90,7 +129,7 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="right" type="Button" parent="CanvasLayer/GridContainer" unique_id=1607172382]
+[node name="right" type="Button" parent="CanvasLayer/controls_container" unique_id=1607172382]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -100,7 +139,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("10_pef4f")
 
-[node name="down_left" type="Button" parent="CanvasLayer/GridContainer" unique_id=588458941]
+[node name="down_left" type="Button" parent="CanvasLayer/controls_container" unique_id=588458941]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -110,7 +149,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("12_cxblh")
 
-[node name="down" type="Button" parent="CanvasLayer/GridContainer" unique_id=1650083177]
+[node name="down" type="Button" parent="CanvasLayer/controls_container" unique_id=1650083177]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -120,7 +159,7 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("14_6o3q4")
 
-[node name="down_right" type="Button" parent="CanvasLayer/GridContainer" unique_id=482530284]
+[node name="down_right" type="Button" parent="CanvasLayer/controls_container" unique_id=482530284]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

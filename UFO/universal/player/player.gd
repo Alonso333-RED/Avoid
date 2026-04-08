@@ -11,7 +11,7 @@ var max_y = 450
 var health: int = max_health
 var is_dead = false
 
-@onready var hp_indicator = $/root/Node2D/game_ui/CanvasLayer/GridContainer/Label
+@onready var hp_indicator = $/root/Node2D/game_ui/CanvasLayer/controls_container/Label
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
